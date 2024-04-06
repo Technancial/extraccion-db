@@ -1,0 +1,27 @@
+{
+  "name": "dynamo-athena",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:clean && npm run build:compile",
+    "build:clean": "rimraf dist; exit 0",
+    "build:compile": "rimraf dist && tsc -p tsconfig.json && tsc-alias -p tsconfig.json --silent",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "rimraf": "^5.0.5",
+    "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.8.8",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1588.0",
+    "zlib": "^1.0.5"
+  }
+}

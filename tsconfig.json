@@ -1,0 +1,62 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", // Target environment
+    "experimentalDecorators": true, // Enables experimental support for decorators
+    "emitDecoratorMetadata": true, // Enables experimental support for emitting type metadata for decorators which works with the module
+    "resolveJsonModule": true, // Allows importing modules with a ‘.json’ extension, which is a common practice in node projects
+    "preserveConstEnums": true,
+    "strictPropertyInitialization": false, // Enable strict checking of property initialization in classes
+    "strict": true, // Enable all strict type-checking options
+    "sourceMap": true, // Enables the generation of sourcemap files
+    "module": "commonjs", // Sets the module system for the program. "CommonJS" for node projects.
+    "outDir": "./dist", // .js (as well as .d.ts, .js.map, etc.) files will be emitted into this directory
+    "moduleResolution": "node", // Pretty much always node for modern JS. Other option is "classic"
+    "esModuleInterop": true, // fixes some issues TS originally had with the ES6 spec where TypeScript treats CommonJS/AMD/UMD modules similar to ES6 module
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // TypeScript will issue an error if a program tries to include a file by a casing different from the casing on disk
+    "isolatedModules": true,
+    "types": ["node"],
+    "baseUrl": "./", // Sets a base directory to resolve non-absolute module names
+    "paths": {
+      "@application/*": ["./src/application/*"],
+      "@domain/*": ["./src/domain/*"],
+      "@infrastructure/*": ["./src/infrastructure/*"],
+      "@/*": ["./src/*"]
+    } // A series of entries which re-map imports to lookup locations relative to the baseUrl
+
+    // "rootDir": ".",
+    // "allowJs": true, // Allow JavaScript files to be imported inside your project, instead of just .ts and .tsx files
+    // "declaration": true, // Generate .d.ts files for every TypeScript or JavaScript file inside your project
+    // "declarationMap": true,
+    // "lib": ["es2019", "es2020", "es2021", "es2022", "esnext"], // Specifies which default set of type definitions to use ("DOM", "ES6", etc)
+    // "noEmit": false, // Do not emit compiler output files like JavaScript source code, source-maps or declarations.
+    // "composite": true,
+    // // Module resolution
+    // "typeRoots": ["../node_modules/@types", "node_modules/@types", "src/types"],
+
+    // // Advanced
+    // "listEmittedFiles": false, // Print names of generated files part of the compilation
+    // "listFiles": false, // Print names of files part of the compilation
+    // "traceResolution": false, // Report module resolution log messages
+
+    // Experimental
+
+    // Strict checks
+    // "allowUnreachableCode": false, // Pick up dead code paths
+    // "alwaysStrict": true, // Parse in strict mode and emit "use strict" for each source file
+    // "noImplicitAny": true, // Raise error on expressions and declarations with an implied 'any' type
+    // "noImplicitThis": true, // Raise error on 'this' expressions with an implied 'any' type
+    // "strictFunctionTypes": true, // Enable strict checking of function types
+    // "strictNullChecks": true, // Enable strict null checks
+
+    // Linter Checks
+    // "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch statement
+    // "noImplicitReturns": true, // Report error when not all code paths in function return a value
+    // "noUnusedLocals": true, // Report errors on unused local variables
+    // "noUnusedParameters": false, // Report errors on unused parameters
+    // "pretty": true // Stylize errors and messages using color and context
+  }
+  // "include": ["./src", "./src/domain/config/atlas.json", "./test"],
+  // "exclude": ["node_modules", "dist"], // Specifies an array of filenames or patterns that should be skipped when resolving include
+  // "compileOnSave": false // Compile on save
+}
